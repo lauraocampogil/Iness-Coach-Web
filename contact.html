@@ -3,41 +3,34 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- Add all meta tags right after viewport -->
+
+		<!-- Meta tags for SEO -->
 		<meta
 			name="description"
-			content="InessCoach - Spécialiste en préparation mentale pour jeunes footballeurs. Coaching psychologique, ateliers de confiance en soi, formations pour parents et coachs. Approche bienveillante pour performer sur le terrain et dans la vie."
+			content="Contacta con Unix Creative Studio para diseño web profesional, asistencia automatica con chatbots, SEO y optimización de Google Maps. Estamos aquí para responder todas tus preguntas y ayudarte con tu proyecto digital."
 		/>
-		<meta
-			name="keywords"
-			content="préparation mentale football, coaching psychologique jeunes, confiance en soi football, mental sportif, psychologie du sport, formation parents coachs, développement personnel sportif, gestion stress compétition, motivation football, performance mentale"
-		/>
-		<meta name="author" content="InessCoach" />
+		<meta name="keywords" content="contacto unix studio, diseño web contacto, desarrollo web, chatbot, SEO, contactar diseñador web, servicios web contacto" />
+		<meta name="author" content="Unix Creative Studio" />
 		<meta name="robots" content="index, follow" />
 
-		<!-- Styles for the website -->
-		<link rel="icon" href="images/Favicon-32px_InessCoach.webp" type="image/x-icon" />
-		<link rel="preload" href="images/InessCoach-Logo.webp" as="image" type="image/webp" />
+		<!-- Social Media Meta Tags -->
+		<meta property="og:title" content="Contacto - Unix Creative Studio" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://unixcreativestudio.com/images/UNIX_TRANSPARENCY_WEB.png" />
+		<meta property="og:url" content="https://unixcreativestudio.com/contact.html" />
+		<meta property="og:description" content="Contactez con Unix Creative Studio para diseño web profesional y servicios digitales. Respuesta rápida garantizada." />
+		<title>InessCoach - Contact</title>
+		<link rel="icon" href="images/Unix_favicon.webp" type="image/x-icon" />
+		<link rel="preload" as="image" href="images/UNIX_TRANSPARENCY_WEB.webp" type="image/webp" />
 		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'" />
 		<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /></noscript>
 		<link rel="stylesheet" href="styles.css" />
-		<link rel="preconnect" href="https://cdn.lordicon.com" />
-
-		<!-- Social Media Meta Tags -->
-		<meta property="og:title" content="Préparation Mentale Football - Coaching Psychologique pour Jeunes Joueurs" />
-		<meta property="og:type" content="website" />
-		<meta property="og:image" content="https://iness-coach.com/images/InessCoach-Logo.webp" />
-		<meta property="og:url" content="https://iness-coach.com" />
-		<meta property="og:description" content="Coaching mental et préparation psychologique pour jeunes footballeurs. Ateliers, formations pour parents et coachs. Renforcez le mental sur le terrain et développez la confiance en soi." />
-		<meta property="og:site_name" content="Mental Football Coach" />
-		<meta property="og:locale" content="fr_FR" />
-		<title>InessCoach</title>
 	</head>
 	<body>
 		<nav class="nav-container">
 			<div class="logo">
-				<a href="index.html"><img src="images/InessCoach-Logo.webp" width="60" height="60" alt="Logo de InessCoach - Page Principal" fetchpriority="high" /></a>
+				<a href="index.html"><img src="images/InessCoach-Logo.webp" width="60" height="60" alt="Logo de InessCoach - Page Principal" /></a>
 			</div>
 			<div class="hamburger-menu">
 				<div class="bar"></div>
@@ -50,10 +43,12 @@
 				<a href="#inesscoach" data-i18n="nav.services">InessCoach</a>
 				<a href="#blog" data-i18n="nav.faq">Blog</a>
 			</div>
+
 			<div class="nav-right">
 				<a href="contact.html" class="get-in-touch-desktop" data-i18n="nav.contact">Contactez-nous</a>
 			</div>
 		</nav>
+
 		<div class="mobile-menu">
 			<div class="mobile-menu-header">
 				<a href="index.html"><img src="images/InessCoach-Logo.webp" width="60" height="60" alt="Logo de InessCoach - Menu Téléphone" /></a>
@@ -67,13 +62,34 @@
 				<a href="contact.html" class="mobile-cta" data-i18n="nav_mobile.contact">Contactez-nous</a>
 			</div>
 		</div>
-		<header class="hero">
-			<div class="hero-content">
-				<h1 data-i18n="hero.title">Forgez un mental de champion</h1>
-				<p data-i18n="hero.subtitle">Accompagnement psychologique pour jeunes footballeurs. Développez votre confiance, maîtrisez vos émotions et révélez votre plein potentiel avec une approche bienveillante et professionnelle.</p>
-				<a href="#services" class="cta-button" data-i18n="button.hero_service">Voir notre méthode</a>
+
+		<div class="contact-container" id="contact">
+			<div class="contact-label">
+				<i class="fas fa-phone"></i>
+				<span data-i18n="about_page.contact"></span>
 			</div>
-		</header>
+
+			<h1 data-i18n="contact.title">Nous sommes là pour vous aider</h1>
+			<p data-i18n="contact.subtitle">Le service client est notre priorité absolue. Nous sommes là pour répondre à toutes vos questions.</p>
+
+			<form class="contact-form" action="https://formspree.io/f/mnnjjzdy" method="POST">
+				<div class="form-row">
+					<div class="form-group">
+						<label data-i18n="contact.form.name">Nom et prénom</label>
+						<input type="text" name="nombre" data-i18n-placeholder="placeholder.introduce_your_name" placeholder="Entrez votre nom" required />
+					</div>
+					<div class="form-group">
+						<label data-i18n="contact.form.mail">Email</label>
+						<input type="email" name="email" data-i18n-placeholder="placeholder.introduce_your_mail" placeholder="Entrez votre adresse e-mail" required />
+					</div>
+				</div>
+				<div class="form-group">
+					<label data-i18n="contact.form.message">Message</label>
+					<textarea name="message" data-i18n-placeholder="placeholder.introduce_your_message" placeholder="Entrez votre message" required></textarea>
+				</div>
+				<button type="submit" data-i18n="button.send_message">Envoyez votre message</button>
+			</form>
+		</div>
 		<footer class="footer-container">
 			<h2 data-i18n="footer.name_brand">InessCoach</h2>
 			<nav class="footer-nav">
@@ -90,8 +106,7 @@
 			</p>
 			<p data-i18n="footer.made_in_belgium">Fabriqué en Belgique</p>
 		</footer>
-
-		<script src="main.js" defer></script>
+		<script src="main.js" defer type="module"></script>
 		<!-- FAQ -->
 		<script>
 			const faqs = document.querySelectorAll(".faq");
@@ -128,43 +143,19 @@
 				});
 			});
 		</script>
-		<!-- Lord-icon -->
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				const featureSection = document.querySelector(".features");
-				if (!featureSection) return;
-
-				const observer = new IntersectionObserver(
-					(entries) => {
-						entries.forEach((entry) => {
-							if (entry.isIntersecting) {
-								const script = document.createElement("script");
-								script.src = "https://cdn.lordicon.com/lordicon.js";
-								script.async = true;
-								document.body.appendChild(script);
-								observer.disconnect();
-							}
-						});
-					},
-					{ rootMargin: "100px" }
-				);
-
-				observer.observe(featureSection);
-			});
-		</script>
+		<!-- schema.org markup for the contact page -->
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
-				"@type": "Organization",
-				"name": "Unix Creative Studio",
-				"logo": "https://unixcreativestudio.com/images/UNIX_TRANSPARENCY_WEB.png"
-			}
-		</script>
-		<script>
-			if ("serviceWorker" in navigator) {
-				navigator.serviceWorker.register("/service-worker.js").then(function () {
-					console.log("Service Worker Registered");
-				});
+				"@type": "ContactPage",
+				"name": "Unix Creative Studio - Contacto",
+				"description": "Página de contacto de Unix Creative Studio para servicios de diseño web y desarrollo",
+				"url": "https://unixcreativestudio.com/contact.html",
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"contactType": "customer service",
+					"availableLanguage": ["Spanish", "English"]
+				}
 			}
 		</script>
 	</body>
