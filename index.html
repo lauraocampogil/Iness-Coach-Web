@@ -47,7 +47,15 @@
 
 			<div class="nav-links">
 				<a href="#features" data-i18n="nav.features">Caractéristiques</a>
-				<a href="#inesscoach" data-i18n="nav.services">InessCoach</a>
+				<div class="nav-item">
+					<a href="#inesscoach" class="dropdown-toggle"
+						>InessCoach <span class="dropdown-arrow"><i class="fas fa-caret-down"></i></span
+					></a>
+					<div class="dropdown-menu">
+						<a href="#mission">Notre mission</a>
+						<a href="#methode">Notre méthode</a>
+					</div>
+				</div>
 				<a href="#blog" data-i18n="nav.faq">Blog</a>
 			</div>
 			<div class="nav-right">
@@ -61,7 +69,14 @@
 			</div>
 			<div class="mobile-menu-links">
 				<a href="#features" data-i18n="nav.features">Caractéristiques</a>
-				<a href="#inesscoach" data-i18n="nav.services">InessCoach</a>
+				<div class="mobile-dropdown-item">
+					<a href="#inesscoach" class="mobile-dropdown-toggle" onClick="toggleMobileDropdown(this)">InessCoach</a>
+					<span class="mobile-dropdown-arrow"><i class="fas fa-caret-down"></i></span>
+					<div class="mobile-dropdown-content">
+						<a href="#mission">Notre mission</a>
+						<a href="#methode">Notre méthode</a>
+					</div>
+				</div>
 				<a href="#blog" data-i18n="nav.faq">Blog</a>
 
 				<a href="contact.html" class="mobile-cta" data-i18n="nav_mobile.contact">Contactez-nous</a>
@@ -69,7 +84,7 @@
 		</div>
 		<header class="hero">
 			<div class="hero-content">
-				<h1 data-i18n="hero.title">Forgez un mental de champion</h1>
+				<h1 data-i18n="hero.title">Forgez un mental de champion!</h1>
 				<p data-i18n="hero.subtitle">Accompagnement psychologique pour jeunes footballeurs. Développez votre confiance, maîtrisez vos émotions et révélez votre plein potentiel avec une approche bienveillante et professionnelle.</p>
 				<a href="#services" class="cta-button" data-i18n="button.hero_service">Voir notre méthode</a>
 			</div>
