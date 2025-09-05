@@ -201,7 +201,7 @@ img {
 	right: -100%;
 	width: 100%;
 	height: 100vh;
-	background: rgba(20, 20, 20, 0.98);
+	background: #3b5d17;
 	backdrop-filter: blur(10px);
 	z-index: 999;
 	transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1);
@@ -230,7 +230,7 @@ img {
 }
 
 .close-menu {
-	color: black;
+	color: white;
 	font-size: 1.5rem;
 	cursor: pointer;
 	transform: rotate(-180deg);
@@ -258,7 +258,7 @@ img {
 }
 
 .mobile-menu-links a {
-	color: black;
+	color: white;
 	text-decoration: none;
 	font-size: 1.2rem;
 	letter-spacing: 1px;
@@ -268,7 +268,7 @@ img {
 }
 .mobile-menu-links > a,
 .mobile-dropdown-item {
-	color: black;
+	color: white;
 	text-decoration: none;
 	font-size: 1.2rem;
 	letter-spacing: 1px;
@@ -1389,7 +1389,26 @@ img {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+	.hamburger-menu {
+		display: block;
+	}
+
+	.nav-container {
+		padding: 1rem 2rem;
+	}
+}
 @media (max-width: 768px) {
+	.nav-container {
+		justify-content: space-between;
+		padding: 0.5rem 1.5rem;
+	}
+	.nav-right {
+		display: none;
+	}
+	.hamburger-menu {
+		display: block;
+	}
 	.hero h1 {
 		font-size: 3rem;
 	}
@@ -1412,6 +1431,24 @@ img {
 		bottom: -100px;
 		right: -100px;
 	}
+	.features-content {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+	.feature {
+		padding: 20px;
+		gap: 5px;
+	}
+
+	.features > h2 {
+		font-size: 28px;
+	}
+	.features {
+		padding-top: 10px;
+	}
+	.feature h3 {
+		font-size: 20px;
+	}
 
 	.shadow-top-right {
 		width: 180px;
@@ -1425,10 +1462,6 @@ img {
 		height: 200px;
 		bottom: -100px;
 		left: -100px;
-	}
-	.nav-container {
-		width: 95%;
-		padding: 0.6rem 1.5rem;
 	}
 
 	.logo img {
