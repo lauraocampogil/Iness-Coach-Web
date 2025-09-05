@@ -1043,6 +1043,29 @@ img {
 #club .service-card {
 	padding: 1.8rem;
 }
+/* Blog */
+.blogs {
+	min-height: 50vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 4.5rem;
+	padding: 2rem;
+	text-align: center;
+}
+
+.blogs > p {
+	text-align: center;
+	color: rgba(255, 255, 255, 0.7);
+	margin-bottom: 10px;
+}
+
+.blogs > h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	color: black;
+}
 
 /* Contact */
 .contact-container {
@@ -1073,7 +1096,7 @@ img {
 	transform: rotate(180deg);
 }
 .contact-container h1 {
-	font-size: 3.5rem;
+	font-size: 2.5rem;
 	margin-bottom: 1rem;
 	color: black;
 	opacity: 0;

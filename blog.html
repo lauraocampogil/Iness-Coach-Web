@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Meta tags for SEO -->
+		<meta
+			name="description"
+			content="Contactez InessCoach pour votre préparation mentale football. Coaching psychologique personnalisé pour jeunes joueurs, ateliers collectifs, formations coachs et parents. Devis gratuit et conseils bienveillants."
+		/>
+		<meta name="keywords" content="contact InessCoach, préparation mentale football contact, coaching psychologique rendez-vous, formation coachs contact, atelier mental football, consultation psychologie sport, devis coaching mental" />
+		<meta name="author" content="InessCoach" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Social Media Meta Tags -->
+		<meta property="og:title" content="Contact - InessCoach" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://iness-coach.com/images/InessCoach-Logo.webp" />
+		<meta property="og:url" content="https://iness-coach.com" />
+		<meta property="og:description" content="Contactez InessCoach pour votre accompagnement mental football. Coaching individuel, ateliers collectifs, formations. Réponse rapide garantie et approche bienveillante." />
+		<title>InessCoach - Blog</title>
+		<link rel="icon" href="images/Favicon-32px_InessCoach.webp" type="image/x-icon" />
+		<link rel="preload" as="image" href="images/InessCoach-Logo.webp" type="image/webp" />
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /></noscript>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<nav class="nav-container">
+			<div class="logo">
+				<a href="index.html"><img src="images/InessCoach-Logo.webp" width="60" height="60" alt="Logo de InessCoach - Page Principal" fetchpriority="high" /></a>
+			</div>
+			<div class="hamburger-menu">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+
+			<div class="nav-links">
+				<a href="#features" data-i18n="nav.features">Caractéristiques</a>
+				<div class="nav-item">
+					<a href="#inesscoach" class="dropdown-toggle"
+						>InessCoach <span class="dropdown-arrow"><i class="fas fa-caret-down"></i></span
+					></a>
+					<div class="dropdown-menu">
+						<a href="#missions">Notre mission</a>
+						<a href="#methodes">Notre méthode</a>
+					</div>
+				</div>
+				<a href="blog.html" data-i18n="nav.faq">Blog</a>
+			</div>
+			<div class="nav-right">
+				<a href="contact.html" class="get-in-touch-desktop" data-i18n="nav.contact">Contactez-nous</a>
+			</div>
+		</nav>
+		<div class="mobile-menu">
+			<div class="mobile-menu-header">
+				<a href="index.html"><img src="images/InessCoach-Logo.webp" width="60" height="60" alt="Logo de InessCoach - Menu Téléphone" /></a>
+				<div class="close-menu">✕</div>
+			</div>
+			<div class="mobile-menu-links">
+				<a href="#features" data-i18n="nav.features">Caractéristiques</a>
+				<div class="mobile-dropdown-item">
+					<a href="#inesscoach" class="mobile-dropdown-toggle" onClick="toggleMobileDropdown(this)">InessCoach</a>
+					<span class="mobile-dropdown-arrow"><i class="fas fa-caret-down"></i></span>
+					<div class="mobile-dropdown-content">
+						<a href="#missions">Notre mission</a>
+						<a href="#methodes">Notre méthode</a>
+					</div>
+				</div>
+				<a href="blog.html" data-i18n="nav.faq">Blog</a>
+
+				<a href="contact.html" class="mobile-cta" data-i18n="nav_mobile.contact">Contactez-nous</a>
+			</div>
+		</div>
+		<div class="blogs">
+			<div class="circle" id="blog">
+				<i class="fas fa-medal"></i>
+				<span>Pourquoi nous choisir</span>
+			</div>
+			<h1 data-i18n="title_page.features">
+				Une approche unique au croisement de la <br />
+				psychologie et du football
+			</h1>
+		</div>
+		<script src="main.js" defer></script>
+		<!-- Hamburgermenu -->
+		<script>
+			const hamburger = document.querySelector(".hamburger-menu");
+			const mobileMenu = document.querySelector(".mobile-menu");
+			const closeMenu = document.querySelector(".close-menu");
+			const mobileLinks = document.querySelectorAll(".mobile-menu-links a");
+
+			hamburger.addEventListener("click", () => {
+				mobileMenu.classList.add("active");
+				document.body.style.overflow = "hidden";
+				document.querySelector(".nav-container").style.display = "none";
+			});
+
+			closeMenu.addEventListener("click", () => {
+				mobileMenu.classList.remove("active");
+				document.body.style.overflow = "auto";
+				document.querySelector(".nav-container").style.display = "flex";
+			});
+
+			mobileLinks.forEach((link) => {
+				link.addEventListener("click", () => {
+					mobileMenu.classList.remove("active");
+					document.body.style.overflow = "auto";
+					document.querySelector(".nav-container").style.display = "flex";
+				});
+			});
+		</script>
+		<!-- Lord-icon -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const featureSection = document.querySelector(".features");
+				if (!featureSection) return;
+
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								const script = document.createElement("script");
+								script.src = "https://cdn.lordicon.com/lordicon.js";
+								script.async = true;
+								document.body.appendChild(script);
+								observer.disconnect();
+							}
+						});
+					},
+					{ rootMargin: "100px" }
+				);
+
+				observer.observe(featureSection);
+			});
+		</script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Unix Creative Studio",
+				"logo": "https://unixcreativestudio.com/images/UNIX_TRANSPARENCY_WEB.png"
+			}
+		</script>
+		<script>
+			if ("serviceWorker" in navigator) {
+				navigator.serviceWorker.register("/service-worker.js").then(function () {
+					console.log("Service Worker Registered");
+				});
+			}
+		</script>
+	</body>
+</html>
