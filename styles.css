@@ -723,6 +723,12 @@ img {
 	margin-bottom: 2rem;
 	justify-content: center;
 }
+.circle-contact {
+	opacity: 0;
+	transform: translateY(30px);
+	animation: fadeInUp 1s ease forwards;
+	animation-delay: 0.3s;
+}
 
 /* Mission */
 .missions {
@@ -804,7 +810,7 @@ img {
 
 .mission-card:nth-child(5) {
 	grid-column: 4 / 5;
-	background: linear-gradient(135deg, #a0dc4c, #b6e86e);
+	background: linear-gradient(135deg, #a0dc4c, #7bc022);
 	color: white;
 	transform: rotate(1.5deg);
 	margin-top: -2rem;
@@ -828,12 +834,6 @@ img {
 /* Special styling for different cards */
 .mission-card.highlight {
 	border: 3px solid #3b5d17;
-	background: linear-gradient(135deg, #f8fff8, #e8ffe8);
-}
-
-.mission-card.accent {
-	background: linear-gradient(135deg, #fff8f0, #ffe8d0);
-	border: 2px solid #ffa500;
 }
 
 /* Decorative elements */
