@@ -29,3 +29,23 @@ tabBtns.forEach((btn) => {
 		document.getElementById(targetTab).classList.add("active");
 	});
 });
+// FAQ functionality
+document.addEventListener("DOMContentLoaded", function () {
+	const faqItems = document.querySelectorAll(".faq-item");
+
+	faqItems.forEach((item) => {
+		const question = item.querySelector(".faq-question");
+
+		question.addEventListener("click", () => {
+			// Fermer les autres items ouverts
+			faqItems.forEach((otherItem) => {
+				if (otherItem !== item && otherItem.classList.contains("active")) {
+					otherItem.classList.remove("active");
+				}
+			});
+
+			// Toggle l'item cliqué
+			item.classList.toggle("active");
+		});
+	});
+});
