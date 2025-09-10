@@ -49,3 +49,16 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
+// Service button functionality -> opens email client
+document.addEventListener("DOMContentLoaded", function () {
+	// Add click tracking for analytics (optional)
+	const mailtoLinks = document.querySelectorAll('a[href^="mailto:"]');
+
+	mailtoLinks.forEach((link) => {
+		link.addEventListener("click", function (e) {
+			// Optional: Track button clicks for analytics
+			const serviceType = this.closest(".service-card").querySelector(".service-title").textContent;
+			console.log("Service demandé:", serviceType);
+		});
+	});
+});

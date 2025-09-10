@@ -991,11 +991,35 @@ img {
 	transition: all 0.3s ease;
 	margin-bottom: 1.5rem;
 	font-family: inherit;
+
+	/* Link-specific styles */
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
 }
 
 .service-btn:hover {
 	background: #5e9917;
+	color: white;
+	text-decoration: none;
 	transform: translateY(-2px);
+}
+
+.service-btn:visited,
+.service-btn:focus,
+.service-btn:active {
+	color: white;
+	text-decoration: none;
+}
+
+/* Ensure featured card buttons maintain their style */
+.service-card.featured .service-btn {
+	background: #3b5d17;
+}
+
+.service-card.featured .service-btn:hover {
+	background: #5e9917;
 }
 
 .service-features {
@@ -1248,6 +1272,7 @@ img {
 
 .faq-item.active .faq-toggle {
 	transform: rotate(45deg);
+	font-weight: 300;
 }
 
 .faq-answer {
