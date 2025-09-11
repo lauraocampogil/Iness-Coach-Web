@@ -97,3 +97,69 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 		}
 	});
 });
+// Mobile dropdown functionality for InessCoach menu - FIXED VERSION
+function toggleMobileDropdown(element) {
+	const dropdownItem = element.closest(".mobile-dropdown-item");
+	const dropdownContent = dropdownItem.querySelector(".mobile-dropdown-content");
+	const dropdownArrow = dropdownItem.querySelector(".mobile-dropdown-arrow");
+
+	// Prevent the event from bubbling up
+	event.preventDefault();
+	event.stopPropagation();
+
+	// Toggle active class on the dropdown item
+	dropdownItem.classList.toggle("active");
+
+	// Toggle active class on the dropdown content
+	dropdownContent.classList.toggle("active");
+
+	// Rotate arrow
+	if (dropdownItem.classList.contains("active")) {
+		dropdownArrow.style.transform = "rotate(180deg)";
+	} else {
+		dropdownArrow.style.transform = "rotate(0deg)";
+	}
+
+	// Don't close the mobile menu when clicking InessCoach
+	return false;
+}
+
+// Close mobile dropdown when clicking on a link inside it
+document.addEventListener("DOMContentLoaded", function () {
+	const mobileDropdownLinks = document.querySelectorAll(".mobile-dropdown-content a");
+
+	mobileDropdownLinks.forEach((link) => {
+		link.addEventListener("click", function () {
+			// Close the mobile menu
+			const mobileMenu = document.querySelector(".mobile-menu");
+			const navContainer = document.querySelector(".nav-container");
+
+			mobileMenu.classList.remove("active");
+			document.body.style.overflow = "auto";
+			navContainer.style.display = "flex";
+
+			// Close the dropdown
+			const dropdownItem = this.closest(".mobile-dropdown-item");
+			const dropdownContent = dropdownItem.querySelector(".mobile-dropdown-content");
+			const dropdownArrow = dropdownItem.querySelector(".mobile-dropdown-arrow");
+
+			dropdownItem.classList.remove("active");
+			dropdownContent.classList.remove("active");
+			dropdownArrow.style.transform = "rotate(0deg)";
+		});
+	});
+
+	// Animation delays for mobile menu items
+	const mobileMenuItems = document.querySelectorAll(".mobile-menu-links > a, .mobile-dropdown-item");
+	mobileMenuItems.forEach((item, index) => {
+		item.style.transitionDelay = `${0.4 + index * 0.1}s`;
+	});
+
+	// Fix for direct clicking on InessCoach to open dropdown immediately
+	const mobileDropdownToggle = document.querySelector(".mobile-dropdown-toggle");
+	if (mobileDropdownToggle) {
+		mobileDropdownToggle.addEventListener("click", function (e) {
+			toggleMobileDropdown(this);
+		});
+	}
+});
