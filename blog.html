@@ -75,15 +75,129 @@
 				<a href="contact.html" class="mobile-cta" data-i18n="nav_mobile.contact">Contactez-nous</a>
 			</div>
 		</div>
-		<div class="blogs">
-			<div class="circle" id="blog">
-				<i class="fas fa-medal"></i>
-				<span>Pourquoi nous choisir</span>
+		<div class="hidden">
+			<div class="blogs">
+				<div class="circle" id="blog">
+					<i class="fas fa-book"></i>
+					<span>Guides Pratiques</span>
+				</div>
+				<h1 data-i18n="title_page.features">E-books & Guides pratiques</h1>
+				<div class="header-section">
+					<div class="intro-text">
+						<p>
+							Ici, vous trouverez des ressources exclusives conçues pour accompagner les parents, coachs et athlètes dans leur développement mental et personnel. Téléchargez nos e-books, fiches pratiques et outils pour progresser, mieux comprendre le
+							mental sportif et soutenir votre enfant ou votre équipe au quotidien.
+						</p>
+						<br />
+						<p><strong>E-books gratuits :</strong> Découvrez les fondamentaux de la préparation mentale avec nos guides d'introduction accessibles à tous.</p>
+						<p><strong>E-books premium :</strong> Approfondissez vos connaissances avec des méthodes avancées, exercices détaillés et stratégies professionnelles pour un accompagnement optimal.</p>
+					</div>
+				</div>
+				<!-- Toggle Section -->
+				<div class="toggle-section">
+					<div class="toggle-container">
+						<div class="toggle-slider" id="toggleSlider"></div>
+						<button class="toggle-btn active" id="freeBtn" onclick="showSection('free')">Gratuit</button>
+						<button class="toggle-btn" id="premiumBtn" onclick="showSection('premium')">Premium</button>
+					</div>
+				</div>
+
+				<!-- Free E-books Section -->
+				<div class="ebooks-container">
+					<div class="content-section active" id="freeSection">
+						<div class="ebooks-grid">
+							<!-- Free E-book 1 -->
+							<div class="ebook-card">
+								<img src="images/ebook-cover-1.jpg" alt="Et si on repensait notre façon de coacher" class="ebook-cover" />
+								<h3 class="ebook-title">Et si on repensait notre façon de coacher ?</h3>
+								<p class="ebook-description">5 clés pour coacher différemment et créer un environnement bienveillant qui favorise l'épanouissement des jeunes joueurs.</p>
+								<div class="ebook-price">Gratuit</div>
+								<a href="#" class="download-btn">
+									<i class="fas fa-download"></i>
+									Télécharger le PDF
+								</a>
+							</div>
+
+							<!-- Free E-book 2 -->
+							<div class="ebook-card">
+								<img src="images/ebook-cover-2.jpg" alt="Parents de jeunes athlètes" class="ebook-cover" />
+								<h3 class="ebook-title">Parents de jeunes athlètes : 3 erreurs fréquentes à éviter</h3>
+								<p class="ebook-description">Voici les 3 erreurs les plus fréquentes que nous observons chez les parents... et comment vous pouvez les éviter intelligemment.</p>
+								<div class="ebook-price">Gratuit</div>
+								<a href="#" class="download-btn">
+									<i class="fas fa-download"></i>
+									Télécharger le PDF
+								</a>
+							</div>
+
+							<!-- Free E-book 3 -->
+							<div class="ebook-card">
+								<img src="images/ebook-cover-3.jpg" alt="Pourquoi le plaisir doit rester au cœur du jeu" class="ebook-cover" />
+								<h3 class="ebook-title">Pourquoi le plaisir doit rester au cœur du jeu ?</h3>
+								<p class="ebook-description">Un e-book pour les parents et coachs sur l'importance du plaisir dans le développement sportif et personnel des jeunes.</p>
+								<div class="ebook-price">Gratuit</div>
+								<a href="#" class="download-btn">
+									<i class="fas fa-download"></i>
+									Télécharger le PDF
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Premium E-books Section -->
+					<div class="content-section" id="premiumSection">
+						<div class="ebooks-grid">
+							<!-- Premium E-book 1 -->
+							<div class="ebook-card">
+								<div class="premium-badge">Premium</div>
+								<img src="images/ebook-premium-1.jpg" alt="Guide avancé du coaching mental" class="ebook-cover" />
+								<h3 class="ebook-title">Pourquoi le mental change tout ?</h3>
+								<p class="ebook-description">Guide complet avec exercices pratiques, routines mentales détaillées et méthodes professionnelles pour développer la préparation mentale.</p>
+								<div class="ebook-price">29€</div>
+								<a
+									href="mailto:ferrahiness.info@gmail.com?subject=Commande%20E-book%20Premium%20-%20Mental%20Change%20Tout&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20commander%20l'e-book%20premium%20'Pourquoi%20le%20mental%20change%20tout%20?'%20au%20prix%20de%2029€.%0D%0A%0D%0AMes%20informations%20:%0D%0A-%20Nom%20:%20%0D%0A-%20Email%20:%20%0D%0A-%20Téléphone%20:%20%0D%0A%0D%0AMerci%20de%20me%20communiquer%20les%20modalités%20de%20paiement.%0D%0A%0D%0ACordialement"
+									class="download-btn premium-btn"
+								>
+									<i class="fas fa-shopping-cart"></i>
+									Commander
+								</a>
+							</div>
+
+							<!-- Premium E-book 2 -->
+							<div class="ebook-card">
+								<div class="premium-badge">Premium</div>
+								<img src="images/ebook-premium-2.jpg" alt="Accompagnement parental avancé" class="ebook-cover" />
+								<h3 class="ebook-title">L'accompagnement parental : Méthodes avancées</h3>
+								<p class="ebook-description">Approfondissement des stratégies parentales avec exercices concrets, scripts de communication et outils d'évaluation du progrès.</p>
+								<div class="ebook-price">35€</div>
+								<a
+									href="mailto:ferrahiness.info@gmail.com?subject=Commande%20E-book%20Premium%20-%20Accompagnement%20Parental&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20commander%20l'e-book%20premium%20'L'accompagnement%20parental%20:%20Méthodes%20avancées'%20au%20prix%20de%2035€.%0D%0A%0D%0AMes%20informations%20:%0D%0A-%20Nom%20:%20%0D%0A-%20Email%20:%20%0D%0A-%20Téléphone%20:%20%0D%0A%0D%0AMerci%20de%20me%20communiquer%20les%20modalités%20de%20paiement.%0D%0A%0D%0ACordialement"
+									class="download-btn premium-btn"
+								>
+									<i class="fas fa-shopping-cart"></i>
+									Commander
+								</a>
+							</div>
+
+							<!-- Premium E-book 3 -->
+							<div class="ebook-card">
+								<div class="premium-badge">Premium</div>
+								<img src="images/ebook-premium-3.jpg" alt="Psychologie du sport appliquée" class="ebook-cover" />
+								<h3 class="ebook-title">Maintenir le plaisir : Stratégies d'élite</h3>
+								<p class="ebook-description">Techniques avancées pour maintenir la motivation et le plaisir à long terme, avec études de cas et programmes d'entraînement mental personnalisés.</p>
+								<div class="ebook-price">39€</div>
+								<a
+									href="mailto:ferrahiness.info@gmail.com?subject=Commande%20E-book%20Premium%20-%20Stratégies%20Elite&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20commander%20l'e-book%20premium%20'Maintenir%20le%20plaisir%20:%20Stratégies%20d'élite'%20au%20prix%20de%2039€.%0D%0A%0D%0AMes%20informations%20:%0D%0A-%20Nom%20:%20%0D%0A-%20Email%20:%20%0D%0A-%20Téléphone%20:%20%0D%0A%0D%0AMerci%20de%20me%20communiquer%20les%20modalités%20de%20paiement.%0D%0A%0D%0ACordialement"
+									class="download-btn premium-btn"
+								>
+									<i class="fas fa-shopping-cart"></i>
+									Commander
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<h1 data-i18n="title_page.features">
-				Une approche unique au croisement de la <br />
-				psychologie et du football
-			</h1>
 		</div>
 		<footer class="footer-container">
 			<div class="footer-content">

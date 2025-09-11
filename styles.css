@@ -1069,14 +1069,12 @@ img {
 }
 /* Blog */
 .blogs {
-	min-height: 50vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-top: 4.5rem;
+	margin-top: 120px;
 	padding: 2rem;
-	text-align: center;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5rem;
 }
 
 .blogs > p {
@@ -1089,6 +1087,182 @@ img {
 	font-size: 2.5rem;
 	margin-bottom: 1rem;
 	color: black;
+	text-align: center;
+}
+.header-section {
+	text-align: left;
+	margin-bottom: 3rem;
+}
+.header-section h1 {
+	font-size: 3rem;
+	font-weight: 700;
+	color: #333;
+	margin-bottom: 1.5rem;
+}
+
+.intro-text {
+	max-width: 800px;
+	margin: 0 auto;
+	font-size: 1.1rem;
+	color: #3f3f3f;
+	line-height: 1.7;
+}
+
+/* Toggle Section */
+.toggle-section {
+	display: flex;
+	justify-content: center;
+	margin: 3rem 0;
+}
+
+.toggle-container {
+	background: #e9ecef;
+	border-radius: 50px;
+	padding: 0.5rem;
+	display: flex;
+	position: relative;
+}
+
+.toggle-btn {
+	padding: 0.8rem 2rem;
+	border: none;
+	background: transparent;
+	border-radius: 40px;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	color: #666;
+	position: relative;
+	z-index: 2;
+}
+
+.toggle-btn.active {
+	color: white;
+}
+
+.toggle-slider {
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	width: calc(50% - 0.5rem);
+	height: calc(100% - 1rem);
+	background: #3b5d17;
+	border-radius: 40px;
+	transition: transform 0.3s ease;
+	z-index: 1;
+}
+
+.toggle-slider.premium {
+	transform: translateX(100%);
+}
+
+/* E-books Grid */
+.ebooks-container {
+	margin-top: 4rem;
+}
+
+.ebooks-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 2.5rem;
+	margin-top: 2rem;
+}
+
+.ebook-card {
+	background: white;
+	border-radius: 20px;
+	padding: 2rem;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	text-align: center;
+	position: relative;
+}
+
+.ebook-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.ebook-cover {
+	width: 100%;
+	max-width: 250px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 15px;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ebook-title {
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 1rem;
+}
+
+.ebook-description {
+	color: #666;
+	line-height: 1.6;
+	margin-bottom: 1.5rem;
+}
+
+.ebook-price {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #3b5d17;
+	margin-bottom: 1.5rem;
+}
+
+.download-btn {
+	color: white;
+	border: none;
+	padding: 1rem 2rem;
+	border-radius: 50px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	text-decoration: none;
+	background-color: #3b5d17;
+}
+
+.download-btn:hover {
+	background: #5e9917;
+	transform: translateY(-2px);
+}
+
+.premium-btn {
+	background-color: #3b5d17;
+}
+
+.premium-btn:hover {
+	background: #5e9917;
+	transform: translateY(-2px);
+}
+
+/* Content Sections */
+.content-section {
+	display: none;
+}
+
+.content-section.active {
+	display: block;
+}
+
+/* Premium Badge */
+.premium-badge {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	color: white;
+	padding: 0.3rem 0.8rem;
+	border-radius: 15px;
+	font-size: 0.8rem;
+	font-weight: 600;
 }
 
 /* Contact */
