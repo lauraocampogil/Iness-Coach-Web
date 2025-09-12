@@ -1829,6 +1829,9 @@ img {
 	.feature h3 {
 		font-size: 20px;
 	}
+	.missions > h2 {
+		font-size: 28px;
+	}
 
 	.mission-grid {
 		grid-template-columns: 1fr;
@@ -1842,6 +1845,9 @@ img {
 
 	.mission-card p {
 		font-size: 0.95rem;
+	}
+	.methodes > h2 {
+		font-size: 28px;
 	}
 
 	.services-grid {
@@ -1878,7 +1884,7 @@ img {
 	}
 
 	.faq-container h2 {
-		font-size: 2rem;
+		font-size: 28px;
 	}
 
 	.faq-question {
