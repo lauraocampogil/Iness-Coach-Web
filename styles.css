@@ -1213,21 +1213,53 @@ img {
 	margin-top: 4rem;
 }
 
-.ebooks-grid {
+/* Free E-books Grid - 2x2 layout */
+.free-ebooks-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	gap: 2.5rem;
-	margin-top: 2rem;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	max-width: 900px;
+	margin: 0 auto;
 }
 
+/* Premium E-books Grid - 3 on top, 2 below */
+.premium-ebooks-grid {
+	display: grid;
+	gap: 2rem;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.premium-top-row {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+.premium-bottom-row {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+/* Ebook Card Styling */
 .ebook-card {
 	background: white;
 	border-radius: 20px;
-	padding: 2rem;
+	padding: 1.5rem; /* Reduced padding to give more space for content */
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	text-align: center;
 	position: relative;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	/* FIXED: Ensure proper box-sizing */
+	box-sizing: border-box;
+	overflow: hidden; /* Prevent any overflow */
 }
 
 .ebook-card:hover {
@@ -1235,42 +1267,55 @@ img {
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* FIXED: Consistent cover image sizing - SHOW FULL IMAGE */
 .ebook-cover {
 	width: 100%;
-	max-width: 250px;
-	height: 300px;
-	object-fit: cover;
+	height: 180px;
+	object-fit: contain;
 	border-radius: 15px;
-	margin-bottom: 1.5rem;
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+	margin-bottom: 1rem;
+	flex-shrink: 0;
+}
+
+.ebook-content {
+	display: flex;
+	flex-direction: column;
+	/* REMOVED: flex: 1 and height calc to reduce spacing */
+	gap: 0.3rem; /* ADDED: Small consistent gap between elements */
 }
 
 .ebook-title {
-	font-size: 1.4rem;
+	font-size: 1.1rem;
 	font-weight: 600;
 	color: #333;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem; /* REDUCED margin */
+	line-height: 1.2;
+	overflow-wrap: break-word;
 }
 
 .ebook-description {
 	color: #666;
-	line-height: 1.6;
-	margin-bottom: 1.5rem;
+	line-height: 1.4;
+	margin-bottom: 0.5rem; /* REDUCED margin */
+	font-size: 0.85rem;
+	overflow: hidden;
 }
 
 .ebook-price {
 	font-size: 1.2rem;
 	font-weight: 600;
 	color: #3b5d17;
-	margin-bottom: 1.5rem;
+	margin-bottom: 0.3rem; /* VERY SMALL margin */
+	flex-shrink: 0;
 }
 
+/* FIXED: Button with minimal spacing */
 .download-btn {
 	color: white;
 	border: none;
-	padding: 1rem 2rem;
+	padding: 0.8rem 1.5rem;
 	border-radius: 50px;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	font-weight: 600;
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -1279,32 +1324,20 @@ img {
 	gap: 0.5rem;
 	text-decoration: none;
 	background-color: #3b5d17;
+	justify-content: center;
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 0; /* NO margin top */
 }
 
 .download-btn:hover {
 	background: #5e9917;
 	transform: translateY(-2px);
+	color: white;
+	text-decoration: none;
 }
 
-.premium-btn {
-	background-color: #3b5d17;
-}
-
-.premium-btn:hover {
-	background: #5e9917;
-	transform: translateY(-2px);
-}
-
-/* Content Sections */
-.content-section {
-	display: none;
-}
-
-.content-section.active {
-	display: block;
-}
-
-/* Premium Badge */
+/* FIXED: Premium badge positioning */
 .premium-badge {
 	position: absolute;
 	top: 1rem;
@@ -1315,6 +1348,16 @@ img {
 	border-radius: 15px;
 	font-size: 0.8rem;
 	font-weight: 600;
+	z-index: 10; /* Ensure it stays on top */
+}
+
+/* Content Sections */
+.content-section {
+	display: none;
+}
+
+.content-section.active {
+	display: block;
 }
 
 /* Contact */
@@ -1696,6 +1739,14 @@ img {
 	.features-content {
 		grid-template-columns: repeat(2, 1fr);
 	}
+	.premium-top-row {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.premium-bottom-row {
+		grid-template-columns: 1fr;
+		max-width: 400px;
+	}
 }
 
 /* Tablets and small desktops */
@@ -1731,6 +1782,10 @@ img {
 		width: 100% !important;
 		grid-column: auto !important;
 	}
+	.services-container {
+		padding: 1rem;
+		grid-template-columns: 1fr;
+	}
 
 	.hero::before {
 		width: 300px;
@@ -1758,6 +1813,12 @@ img {
 		height: 220px;
 		bottom: -110px;
 		left: -110px;
+	}
+	.premium-top-row {
+		grid-template-columns: 1fr;
+	}
+	.premium-bottom-row {
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -1823,14 +1884,14 @@ img {
 	}
 
 	.features > h2 {
-		font-size: 28px;
+		font-size: 22px;
 	}
 
 	.feature h3 {
-		font-size: 20px;
+		font-size: 18px;
 	}
 	.missions > h2 {
-		font-size: 28px;
+		font-size: 22px;
 	}
 
 	.mission-grid {
@@ -1862,9 +1923,12 @@ img {
 	.service-card {
 		padding: 2rem;
 	}
+	.services-container {
+		padding: 1rem;
+		grid-template-columns: 1fr;
+	}
 
 	.tab-navigation {
-		max-width: 100%;
 		margin-bottom: 2rem;
 	}
 
@@ -1873,9 +1937,48 @@ img {
 		font-size: 0.9rem;
 	}
 
-	.ebooks-grid {
+	.free-ebooks-grid {
 		grid-template-columns: 1fr;
-		gap: 2rem;
+		max-width: 400px;
+	}
+
+	.ebook-card {
+		height: auto;
+		padding: 1.5rem;
+		width: auto;
+	}
+
+	.ebook-cover {
+		height: 200px; /* Slightly smaller on mobile */
+	}
+
+	.ebook-title {
+		font-size: 1.1rem;
+	}
+
+	.ebook-description {
+		font-size: 0.85rem;
+	}
+
+	/* UPDATED: Mobile responsive for new layout */
+	.premium-top-row,
+	.premium-middle-row {
+		grid-template-columns: 1fr; /* Single column on mobile */
+		gap: 1.5rem;
+	}
+
+	.premium-bottom-row {
+		grid-template-columns: 1fr;
+		max-width: 100%;
+	}
+
+	.blogs {
+		padding: 1rem;
+	}
+
+	.toggle-btn {
+		padding: 0.6rem 1rem;
+		font-size: 0.9rem;
 	}
 
 	.form-row {
@@ -1965,7 +2068,24 @@ img {
 	}
 
 	.ebook-card {
-		padding: 1.5rem;
+		min-height: 420px;
+		padding: 1.3rem;
+	}
+
+	.ebook-cover {
+		height: 180px;
+	}
+
+	.download-btn {
+		padding: 0.9rem 1.5rem;
+		font-size: 0.95rem;
+	}
+
+	/* Ensure all premium rows are single column on small mobile */
+	.premium-top-row,
+	.premium-middle-row,
+	.premium-bottom-row {
+		grid-template-columns: 1fr;
 	}
 
 	.contact-form {
@@ -2018,24 +2138,28 @@ img {
 	}
 
 	.hero h1 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		line-height: 1.2;
 	}
 
 	.features,
 	.missions,
-	.methodes,
-	.blogs {
+	.methodes {
 		padding: 30px 5px;
+	}
+	.blogs {
+		padding: 1rem;
 	}
 
 	.feature,
 	.mission-card,
-	.service-card,
-	.ebook-card {
+	.service-card {
 		padding: 1rem;
 	}
-
+	.ebook-card {
+		min-height: 380px;
+		padding: 2rem;
+	}
 	.contact-form {
 		padding: 1rem;
 	}
