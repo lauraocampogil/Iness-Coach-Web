@@ -3,8 +3,8 @@
 require_once('vendor/composer/autoload.php');
 
 // ====== CONFIGURATION - À MODIFIER ======
-$stripe_webhook_secret = 'whsec_2yugEawT7RMf5gYr6KYuEfrcVGkuQsX6';
-$stripe_secret_key = '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';
+$stripe_webhook_secret = $_ENV['whsec_2yugEawT7RMf5gYr6KYuEfrcVGkuQsX6'] ?? '';
+$stripe_secret_key = $_ENV['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'] ?? '';
 
 \Stripe\Stripe::setApiKey($stripe_secret_key);
 
