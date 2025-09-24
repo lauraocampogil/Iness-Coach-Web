@@ -253,6 +253,18 @@ img {
 	opacity: 1;
 	transition-delay: 0.4s;
 }
+.mobile-cta {
+	background: #ffffff;
+	color: black !important;
+	text-decoration: none;
+	padding: 0.7rem;
+	border-radius: 100px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	display: inline-block;
+	margin-top: 1rem;
+	width: auto;
+}
 
 .mobile-menu-links::after {
 	content: "";
