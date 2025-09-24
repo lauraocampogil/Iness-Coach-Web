@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Add all meta tags right after viewport -->
+		<meta
+			name="description"
+			content="InessCoach - Spécialiste en préparation mentale pour jeunes footballeurs. Coaching psychologique, ateliers de confiance en soi, formations pour parents et coachs. Approche bienveillante pour performer sur le terrain et dans la vie."
+		/>
+		<meta
+			name="keywords"
+			content="préparation mentale football, coaching psychologique jeunes, confiance en soi football, mental sportif, psychologie du sport, formation parents coachs, développement personnel sportif, gestion stress compétition, motivation football, performance mentale"
+		/>
+		<meta name="author" content="InessCoach" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Styles for the website -->
+		<link rel="icon" href="images/Favicon-32px_InessCoach.webp" type="image/x-icon" />
+		<link rel="preload" href="images/InessCoach-Logo.webp" as="image" type="image/webp" />
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /></noscript>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="preconnect" href="https://cdn.lordicon.com" />
+
+		<!-- Social Media Meta Tags -->
+		<meta property="og:title" content="Préparation Mentale Football - Coaching Psychologique pour Jeunes Joueurs" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://iness-coach.com/images/InessCoach-Logo.webp" />
+		<meta property="og:url" content="https://iness-coach.com" />
+		<meta property="og:description" content="Coaching mental et préparation psychologique pour jeunes footballeurs. Ateliers, formations pour parents et coachs. Renforcez le mental sur le terrain et développez la confiance en soi." />
+		<meta property="og:site_name" content="Mental Football Coach" />
+		<meta property="og:locale" content="fr_FR" />
+		<title>InessCoach</title>
+	</head>
+	<body>
+		<nav class="nav-container">
+			<div class="logo">
+				<a href="index.html"><img src="images/InessCoach-Logo.webp" width="60" height="60" alt="Logo de InessCoach - Page Principal" fetchpriority="high" /></a>
+			</div>
+			<div class="hamburger-menu">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+
+			<div class="nav-links">
+				<a href="#features" data-i18n="nav.features">Caractéristiques</a>
+				<div class="nav-item">
+					<a href="#inesscoach" class="dropdown-toggle"
+						>InessCoach <span class="dropdown-arrow"><i class="fas fa-caret-down"></i></span
+					></a>
+					<div class="dropdown-menu">
+						<a href="#missions">Notre mission</a>
+						<a href="#methodes">Nos offres</a>
+					</div>
+				</div>
+				<a href="blog.html" data-i18n="nav.faq">E-book</a>
+			</div>
+			<div class="nav-right">
+				<a href="contact.html" class="get-in-touch-desktop" data-i18n="nav.contact">Contactez-nous</a>
+			</div>
+		</nav>
+		<div class="mobile-menu">
+			<div class="mobile-menu-header">
+				<a href="index.html"><img src="images/InessCoach-Logo.webp" width="60" height="60" alt="Logo de InessCoach - Menu Téléphone" /></a>
+				<div class="close-menu">✕</div>
+			</div>
+			<div class="mobile-menu-links">
+				<a href="#features" data-i18n="nav.features">Caractéristiques</a>
+				<a href="#missions">Notre mission</a>
+				<a href="#methodes">Nos offres</a>
+				<a href="blog.html" data-i18n="nav.faq">E-book</a>
+
+				<a href="contact.html" class="mobile-cta" data-i18n="nav_mobile.contact">Contactez-nous</a>
+			</div>
+		</div>
+		<header class="hero">
+			<div class="hero-fade-sides"></div>
+			<!-- Ombres supplémentaires -->
+			<div class="hero-bg-shadow shadow-top-right"></div>
+			<div class="hero-bg-shadow shadow-bottom-left"></div>
+
+			<!-- Particules flottantes -->
+			<div class="floating-particles">
+				<div class="particle"></div>
+				<div class="particle"></div>
+				<div class="particle"></div>
+				<div class="particle"></div>
+			</div>
+			<div class="hero-content">
+				<h1 data-i18n="hero.title">Forgez un mental de champion!</h1>
+				<p data-i18n="hero.subtitle">Accompagnement psychologique pour jeunes footballeurs. Développez votre confiance, maîtrisez vos émotions et révélez votre plein potentiel avec une approche bienveillante et professionnelle.</p>
+				<a href="#methodes" class="cta-button" data-i18n="button.hero_service">Voir notre méthode</a>
+			</div>
+		</header>
+		<div class="features">
+			<div class="circle" id="features">
+				<i class="fas fa-medal"></i>
+				<span>Pourquoi nous choisir</span>
+			</div>
+			<h2 data-i18n="title_page.features">
+				Une approche unique au croisement de la <br />
+				psychologie et du football
+			</h2>
+			<div class="features-content">
+				<div class="feature">
+					<div class="icon-container">
+						<lord-icon src="https://cdn.lordicon.com/fgtzrokh.json" trigger="loop" delay="500" stroke="bold" state="loop-cycle" colors="primary:#ffffff,secondary:#ffffff" style="width: 40px; height: 40px"></lord-icon>
+					</div>
+					<h3 data-i18n="features.subtitle.profesional">Bienveillant</h3>
+					<p>Une approche psychologique respectueuse qui accompagne chaque jeune dans sa singularité, sans jugement ni pression</p>
+				</div>
+				<div class="feature">
+					<div class="icon-container">
+						<lord-icon src="https://cdn.lordicon.com/vmdbqgzi.json" trigger="loop" delay="500" stroke="bold" state="loop-all" colors="primary:#ffffff,secondary:#ffffff" style="width: 40px; height: 40px"></lord-icon>
+					</div>
+					<h3 data-i18n="features.subtitle.responsive">Scientifique</h3>
+					<p>Méthodes basées sur la psychologie du sport : respiration, visualisation, ancrage mental et gestion émotionnelle</p>
+				</div>
+				<div class="feature">
+					<div class="icon-container">
+						<lord-icon src="https://cdn.lordicon.com/jdddpvvb.json" trigger="loop" delay="500" stroke="bold" state="loop-roll" colors="primary:#ffffff,secondary:#ffffff" style="width: 40px; height: 40px"></lord-icon>
+					</div>
+					<h3>Adaptable</h3>
+					<p>Du coaching individuel aux ateliers collectifs, en passant par la formation des coachs - chaque intervention s'adapte aux besoins</p>
+				</div>
+				<div class="feature">
+					<div class="icon-container">
+						<lord-icon src="https://cdn.lordicon.com/hjrbjhnq.json" trigger="loop" delay="500" state="loop-book" colors="primary:#ffffff" style="width: 40px; height: 40px"> </lord-icon>
+					</div>
+					<h3>Formateur</h3>
+					<p>Ne se contente pas d'accompagner les joueurs : forme aussi les parents, coachs et clubs pour un environnement plus sain</p>
+				</div>
+				<div class="feature">
+					<div class="icon-container">
+						<lord-icon src="https://cdn.lordicon.com/jzffwndw.json" trigger="loop" delay="500" stroke="bold" state="loop-oscillate" colors="primary:#ffffff,secondary:#ffffff" style="width: 40px; height: 40px"></lord-icon>
+					</div>
+					<h3>Intégré</h3>
+					<p>S'intègre naturellement aux entraînements existants sans remplacer le coach technique - approche complémentaire</p>
+				</div>
+				<div class="feature">
+					<div class="icon-container">
+						<lord-icon src="https://cdn.lordicon.com/twpfmtiv.json" trigger="loop" delay="500" stroke="bold" state="loop-oscillate" colors="primary:#ffffff,secondary:#ffffff" style="width: 40px; height: 40px"></lord-icon>
+					</div>
+					<h3>Résultats concrets</h3>
+					<p>Outils pratiques et routines mentales à emporter : concentration, confiance, gestion du stress et préparation aux matchs</p>
+				</div>
+			</div>
+		</div>
+		<section class="hidden">
+			<div class="missions">
+				<div class="circle" id="missions">
+					<i class="fas fa-crown"></i>
+					<span>Notre mission</span>
+				</div>
+				<h2>Transformer le mental des jeunes footballeurs à travers une expertise unique</h2>
+
+				<div class="mission-grid">
+					<div class="mission-card">
+						<h3>L'Expertise qui Fait la Différence</h3>
+						<p>
+							7 ans d'expérience dans le football professionnel combinés à un double master en psychologie à l'ULB. Cette double expertise me permet de comprendre les défis du terrain autant que les mécanismes mentaux qui déterminent la performance.
+						</p>
+					</div>
+
+					<div class="mission-card">
+						<h3>Révéler ce qui Sommeille</h3>
+						<p>Chaque jeune footballeur porte en lui un potentiel unique. Ma mission est de le révéler en travaillant sur la confiance, la gestion du stress et la concentration. Je transforme les blocages en tremplins vers l'excellence.</p>
+					</div>
+
+					<div class="mission-card">
+						<h3>Une Méthode Respectueuse</h3>
+						<p>Mon approche psychologique respecte la singularité de chaque joueur. Sans jugement ni pression, j'accompagne chaque jeune à son rythme, en valorisant sa personnalité unique et son style de jeu.</p>
+					</div>
+
+					<div class="mission-card highlight">
+						<h3>Transformer l'Écosystème</h3>
+						<p>Ma mission dépasse l'accompagnement individuel. Je forme aussi les parents, coachs et clubs à la gestion mentale, créant un environnement sain et performant autour de chaque jeune joueur.</p>
+					</div>
+
+					<div class="mission-card">
+						<h3>Au-delà du Terrain</h3>
+						<p>Les compétences mentales développées sur le terrain accompagnent les jeunes dans tous les aspects de leur vie. Je forme des individus équilibrés qui portent cette force mentale bien au-delà du football.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="hidden">
+			<div class="methodes">
+				<div class="circle" id="methodes">
+					<i class="fas fa-flask"></i>
+					<span>Nos offres</span>
+				</div>
+				<h2>Des Solutions Adaptées à Chaque Besoin</h2>
+				<p class="methodes-subtitle">Du coaching individuel aux formations pour clubs, trouvez la formule qui correspond à vos objectifs</p>
+
+				<div class="tab-navigation">
+					<button class="tab-btn active" data-tab="individuel">Individuel</button>
+					<button class="tab-btn" data-tab="groupe">Groupe</button>
+					<button class="tab-btn" data-tab="club">Club</button>
+				</div>
+				<div class="services-container">
+					<!-- INDIVIDUEL TAB -->
+					<div class="tab-content active" id="individuel">
+						<div class="services-grid">
+							<div class="service-card">
+								<h3 class="service-title">Coaching Individuel</h3>
+								<p class="service-description">Préparation mentale personnalisée pour développer stress, confiance et concentration</p>
+								<div class="service-price">35€ <span class="period">/ séance</span></div>
+								<a
+									href="mailto:ferrahiness.info@gmail.com?subject=Demande%20de%20réservation%20-%20Coaching%20Individuel&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20réserver%20une%20séance%20de%20coaching%20individuel.%0D%0A%0D%0AInformations%20:%0D%0A-%20Nom%20:%20%0D%0A-%20Téléphone%20:%20%0D%0A-%20Âge%20du%20joueur%20:%20%0D%0A-%20Club%20actuel%20:%20%0D%0A-%20Objectifs%20spécifiques%20:%20%0D%0A-%20Préférence%20:%20[Présentiel%20/%20Visioconférence]%0D%0A-%20Disponibilités%20préférées%20:%20%0D%0A%0D%0ACordialement"
+									class="service-btn"
+									>Réserver une séance</a
+								>
+								<ul class="service-features">
+									<li>Séance de 45 min à 1h</li>
+									<li>Pour joueurs de 8 à 25 ans</li>
+									<li>Travail personnalisé sur le stress</li>
+									<li>Développement de la confiance</li>
+									<li>Techniques de concentration</li>
+									<li>En présentiel ou visio</li>
+								</ul>
+							</div>
+
+							<div class="service-card featured">
+								<h3 class="service-title">Pack Prépa Mentale</h3>
+								<p class="service-description">Programme complet sur 3 séances pour construire une routine mentale solide</p>
+								<div class="service-price">80€ <span class="period">les 3 séances</span></div>
+								<a
+									href="mailto:ferrahiness.info@gmail.com?subject=Demande%20de%20réservation%20-%20Pack%20Prépa%20Mentale&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20commencer%20le%20Pack%20Prépa%20Mentale%20(3%20séances).%0D%0A%0D%0AInformations%20:%0D%0A-%20Nom%20:%20%0D%0A-%20Téléphone%20:%20%0D%0A-%20Âge%20du%20joueur%20:%20%0D%0A-%20Club%20actuel%20:%20%0D%0A-%20Niveau%20de%20jeu%20:%20%0D%0A-%20Difficultés%20rencontrées%20:%20%0D%0A-%20Objectifs%20prioritaires%20:%20%0D%0A-%20Disponibilités%20préférées%20:%20%0D%0A%0D%0ACordialement"
+									class="service-btn"
+									>Commencer le programme</a
+								>
+								<ul class="service-features">
+									<li>3 séances de 45 min chacune</li>
+									<li>Pour joueurs motivés</li>
+									<li>Séance 1 : Concentration & ancrage</li>
+									<li>Séance 2 : Confiance & motivation</li>
+									<li>Séance 3 : Préparation avant match</li>
+									<li>Fiche outils incluse</li>
+									<li>Routine mentale à emporter</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- GROUPE TAB -->
+					<div class="tab-content" id="groupe">
+						<div class="services-grid">
+							<div class="service-card">
+								<h3 class="service-title">Atelier Collectif</h3>
+								<p class="service-description">Découverte des techniques mentales en groupe pour créer une dynamique collective</p>
+								<div class="service-price">15€ <span class="period">/ participant</span></div>
+								<a
+									href="mailto:ferrahiness.info@gmail.com?subject=Demande%20d'organisation%20-%20Atelier%20Collectif&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20organiser%20un%20atelier%20collectif%20pour%20un%20groupe%20de%20jeunes%20footballeurs.%0D%0A%0D%0AInformations%20:%0D%0A-%20Nom%20du%20contact%20:%20%0D%0A-%20Téléphone%20:%20%0D%0A-%20Club%20/%20Structure%20:%20%0D%0A-%20Nombre%20de%20participants%20:%20%0D%0A-%20Âges%20des%20participants%20:%20%0D%0A-%20Niveau%20de%20jeu%20:%20%0D%0A-%20Objectifs%20de%20l'atelier%20:%20%0D%0A-%20Dates%20préférées%20:%20%20%0D%0A%0D%0ACordialement"
+									class="service-btn"
+									>Organiser un atelier</a
+								>
+								<ul class="service-features">
+									<li>1h à 1h15 par atelier</li>
+									<li>Groupe de 5 à 10 jeunes</li>
+									<li>Exercices de concentration</li>
+									<li>Jeux avec distraction mentale</li>
+									<li>Techniques de gestion du stress</li>
+									<li>Dynamique de groupe positive</li>
+									<li>Tarif forfait : 100€/groupe</li>
+								</ul>
+							</div>
+
+							<div class="service-card featured">
+								<h3 class="service-title">Pack Co-animation</h3>
+								<p class="service-description">Programme intégré aux entraînements pour développer concentration et gestion du stress</p>
+								<div class="service-price">180€ <span class="period">le pack</span></div>
+								<a
+									href="mailto:ferrahiness.info@gmail.com?subject=Demande%20de%20collaboration%20-%20Pack%20Co-animation&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20mettre%20en%20place%20le%20Pack%20Co-animation%20pour%20notre%20équipe.%0D%0A%0D%0AInformations%20:%0D%0A-%20Nom%20du%20contact%20:%20%0D%0A-%20Téléphone%20:%20%0D%0A-%20Club%20/%20Structure%20:%20%0D%0A-%20Catégorie%20d'âge%20:%20%0D%0A-%20Nombre%20de%20joueurs%20:%20%0D%0A-%20Niveau%20de%20l'équipe%20:%20%0D%0A-%20Entraîneur%20principal%20:%20%0D%0A-%20Horaires%20d'entraînement%20:%20%0D%0A-%20Objectifs%20prioritaires%20:%20%0D%0A-%20Période%20:%20%20%0D%0A%0D%0ACordialement"
+									class="service-btn"
+									>Démarrer le programme</a
+								>
+								<ul class="service-features">
+									<li>3 séances de 45-60 min</li>
+									<li>Pour club et groupes de joueurs</li>
+									<li>Intégré aux séances terrain</li>
+									<li>Séance 1 : Concentration</li>
+									<li>Séance 2 : Confiance en soi</li>
+									<li>Séance 3 : Gestion du stress</li>
+									<li>Approche complémentaire au coach</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- CLUB TAB -->
+					<div class="tab-content" id="club">
+						<div class="services-grid">
+							<div class="service-card">
+								<h3 class="service-title">Intervention Ponctuelle</h3>
+								<p class="service-description">Introduction mentale pendant vos entraînements avec suivi terrain et feedback</p>
+								<div class="service-price">70€ <span class="period">/ séance</span></div>
+								<a
+									href="mailto:ferrahiness.info@gmail.com?subject=Demande%20d'intervention%20-%20Intervention%20Ponctuelle&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20planifier%20une%20intervention%20ponctuelle%20durant%20nos%20entraînements.%0D%0A%0D%0AInformations%20:%0D%0A-%20Nom%20du%20contact%20:%20%0D%0A-%20Téléphone%20:%20%0D%0A-%20Club%20/%20Structure%20:%20%0D%0A-%20Catégorie%20d'âge%20:%20%0D%0A-%20Nombre%20de%20joueurs%20:%20%0D%0A-%20Entraîneur%20principal%20:%20%0D%0A-%20Problématiques%20observées%20:%20%0D%0A-%20Objectifs%20de%20l'intervention%20:%20%0D%0A-%20Date%20souhaitée%20:%20%0D%0A-%20Horaire%20d'entraînement%20:%20%0D%0A%20%20%0D%0A%0D%0ACordialement"
+									class="service-btn"
+									>Planifier une intervention</a
+								>
+								<ul class="service-features">
+									<li>30 à 60 min pendant l'entraînement</li>
+									<li>Introduction mentale ciblée</li>
+									<li>Suivi sur le terrain</li>
+									<li>Feedback final personnalisé</li>
+									<li>Outils pratiques à retenir</li>
+									<li>Approche non-intrusive</li>
+								</ul>
+							</div>
+
+							<div class="service-card featured">
+								<h3 class="service-title">Suivi Mental Mensuel</h3>
+								<p class="service-description">Co-animation régulière avec outils à long terme pour un développement mental durable</p>
+								<div class="service-price">220€ <span class="period">/ mois</span></div>
+								<a
+									href="mailto:ferrahiness.info@gmail.com?subject=Demande%20de%20partenariat%20-%20Suivi%20Mental%20Mensuel&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20mettre%20en%20place%20un%20suivi%20mental%20mensuel%20pour%20notre%20club.%0D%0A%0D%0AInformations%20:%0D%0A-%20Nom%20du%20contact%20:%20%0D%0A-%20Fonction%20:%20%0D%0A-%20Téléphone%20:%20%0D%0A-%20Club%20/%20Structure%20:%20%0D%0A-%20Catégorie(s)%20concernée(s)%20:%20%0D%0A-%20Nombre%20total%20de%20joueurs%20:%20%0D%0A-%20Staff%20technique%20:%20%0D%0A-%20Objectifs%20à%20long%20terme%20:%20%0D%0A-%20Budget%20mensuel%20prévu%20:%20%0D%0A-%20Période%20de%20début%20:%20%20%0D%0A%0D%0ACordialement"
+									class="service-btn"
+									>Commencer le suivi</a
+								>
+								<ul class="service-features">
+									<li>4 séances par mois (1/semaine)</li>
+									<li>Pour clubs avec projet régulier</li>
+									<li>Co-animation avec coach technique</li>
+									<li>Outils mentaux à long terme</li>
+									<li>Suivi personnalisé des progrès</li>
+									<li>Évaluation mensuelle</li>
+									<li>Méthodes adaptées au groupe</li>
+								</ul>
+							</div>
+
+							<div class="service-card">
+								<h3 class="service-title">Formation Coachs</h3>
+								<p class="service-description">Apprenez à intégrer le mental dans votre encadrement quotidien des joueurs</p>
+								<div class="service-price">120€ <span class="period">/ groupe</span></div>
+								<a
+									href="mailto:ferrahiness.info@gmail.com?subject=Demande%20de%20formation%20-%20Formation%20Coachs&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20organiser%20une%20formation%20sur%20l'intégration%20du%20mental%20dans%20l'encadrement.%0D%0A%0D%0AInformations%20:%0D%0A-%20Nom%20du%20contact%20:%20%0D%0A-%20Téléphone%20:%20%0D%0A-%20Club%20/%20Structure%20:%20%0D%0A-%20Nombre%20de%20participants%20:%20%0D%0A-%20Profils%20des%20participants%20:%20[Éducateurs/Entraîneurs/Dirigeants]%0D%0A-%20Niveaux%20d'expérience%20:%20%0D%0A-%20Problématiques%20spécifiques%20:%20%0D%0A-%20Objectifs%20de%20la%20formation%20:%20%0D%0A-%20Dates%20préférées%20:%20%0D%0A%20%20%0D%0A%0D%0ACordialement"
+									class="service-btn"
+									>Réserver la formation</a
+								>
+								<ul class="service-features">
+									<li>Session de 2 heures</li>
+									<li>Pour éducateurs et entraîneurs</li>
+									<li>Techniques d'encadrement mental</li>
+									<li>Outils pratiques immédiatement applicables</li>
+									<li>Gestion des situations difficiles</li>
+									<li>Support de formation inclus</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="curved-transition"></div>
+		<footer class="footer-container">
+			<div class="footer-content">
+				<div class="footer-left">
+					<div class="footer-logo">
+						<img src="images/InessCoach-Logo.webp" width="60" height="60" alt="Logo de InessCoach" />
+						<h2>InessCoach</h2>
+					</div>
+
+					<a href="mailto:ferrahiness.info@gmail.com" class="footer-email"> ferrahiness.info@gmail.com </a>
+
+					<div class="footer-social">
+						<a href="https://www.tiktok.com/@iness_coach?_t=ZG-8zRMx92qWtk&_r=1" target="_blank">
+							<i class="fab fa-tiktok"></i>
+						</a>
+						<a href="https://www.instagram.com/iness_coach?igsh=Zmg1NmVieDBlcGJy&utm_source=qr" target="_blank">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</div>
+
+					<div class="footer-copyright">
+						©unix.creative.studio. Tous droits réservés.<br />
+						Fabriqué en Belgique
+					</div>
+				</div>
+
+				<div class="footer-right">
+					<div class="footer-nav-column">
+						<a href="#features">Caractéristiques</a>
+						<a href="#missions">Notre mission</a>
+						<a href="#methodes">Nos offres</a>
+						<a href="blog.html">E-book</a>
+					</div>
+
+					<div class="footer-nav-column">
+						<a href="contact.html">Contactez-nous</a>
+						<a href="contact.html#faq">Questions Fréquentes</a>
+						<a href="https://mixed-stoat-359.notion.site/Terms-and-conditions-26588674cf3280b293bbd5525500f83c" target="_blank">Conditions d'utilisation</a>
+						<a href="https://mixed-stoat-359.notion.site/Privacy-Policy-26588674cf32805daa5bc25629091ed2" target="_blank">Politique de Confidentialité</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="main.js" defer></script>
+		<!-- Hamburgermenu -->
+		<script>
+			const hamburger = document.querySelector(".hamburger-menu");
+			const mobileMenu = document.querySelector(".mobile-menu");
+			const closeMenu = document.querySelector(".close-menu");
+			const mobileLinks = document.querySelectorAll(".mobile-menu-links a");
+
+			hamburger.addEventListener("click", () => {
+				mobileMenu.classList.add("active");
+				document.body.style.overflow = "hidden";
+				document.querySelector(".nav-container").style.display = "none";
+			});
+
+			closeMenu.addEventListener("click", () => {
+				mobileMenu.classList.remove("active");
+				document.body.style.overflow = "auto";
+				document.querySelector(".nav-container").style.display = "flex";
+			});
+
+			mobileLinks.forEach((link) => {
+				link.addEventListener("click", () => {
+					mobileMenu.classList.remove("active");
+					document.body.style.overflow = "auto";
+					document.querySelector(".nav-container").style.display = "flex";
+				});
+			});
+		</script>
+		<!-- Lord-icon -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const featureSection = document.querySelector(".features");
+				if (!featureSection) return;
+
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								const script = document.createElement("script");
+								script.src = "https://cdn.lordicon.com/lordicon.js";
+								script.async = true;
+								document.body.appendChild(script);
+								observer.disconnect();
+							}
+						});
+					},
+					{ rootMargin: "100px" }
+				);
+
+				observer.observe(featureSection);
+			});
+		</script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TJGS6T5V86"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-TJGS6T5V86");
+		</script>
+	</body>
+</html>
