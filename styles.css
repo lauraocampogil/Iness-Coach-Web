@@ -1232,6 +1232,7 @@ img {
 	gap: 2rem;
 	max-width: 900px;
 	margin: 0 auto;
+	grid-auto-rows: 1fr;
 }
 
 /* Premium E-books Grid - 3 on top, 2 below */
@@ -1247,6 +1248,7 @@ img {
 	grid-template-columns: repeat(3, 1fr);
 	gap: 2rem;
 	margin-bottom: 2rem;
+	grid-auto-rows: 1fr;
 }
 
 .premium-bottom-row {
@@ -1255,6 +1257,7 @@ img {
 	gap: 2rem;
 	max-width: 700px;
 	margin: 0 auto;
+	grid-auto-rows: 1fr;
 }
 
 /* Ebook Card Styling */
