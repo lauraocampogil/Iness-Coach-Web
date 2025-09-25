@@ -1799,6 +1799,9 @@ img {
 		padding: 1rem;
 		grid-template-columns: 1fr;
 	}
+	#club .services-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 
 	.hero::before {
 		width: 300px;
