@@ -1255,7 +1255,6 @@ img {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
-	max-width: 700px;
 	margin: 0 auto;
 	grid-auto-rows: 1fr;
 }
@@ -1272,9 +1271,10 @@ img {
 	height: auto;
 	display: flex;
 	flex-direction: column;
-	/* FIXED: Ensure proper box-sizing */
 	box-sizing: border-box;
-	overflow: hidden; /* Prevent any overflow */
+	overflow: hidden;
+	/* FIXED: Ensure minimum consistent height */
+	min-height: 500px;
 }
 
 .ebook-card:hover {
@@ -1296,7 +1296,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	/* REMOVED: flex: 1 and height calc to reduce spacing */
-	gap: 0.3rem; /* ADDED: Small consistent gap between elements */
+	gap: 0.5rem; /* ADDED: Small consistent gap between elements */
 }
 
 .ebook-title {
@@ -1342,7 +1342,7 @@ img {
 	justify-content: center;
 	width: 100%;
 	box-sizing: border-box;
-	margin-top: 0; /* NO margin top */
+	margin-top: auto;
 }
 
 .download-btn:hover {
@@ -1755,12 +1755,15 @@ img {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	.premium-top-row {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr;
 	}
 
 	.premium-bottom-row {
 		grid-template-columns: 1fr;
-		max-width: 400px;
+		/* REMOVED: max-width restriction completely */
+	}
+	.ebook-card {
+		min-height: 450px;
 	}
 }
 
@@ -1829,11 +1832,26 @@ img {
 		bottom: -110px;
 		left: -110px;
 	}
-	.premium-top-row {
-		grid-template-columns: 1fr;
-	}
+	.premium-top-row,
 	.premium-bottom-row {
 		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	/* ENSURE: Same width for all containers */
+	.premium-bottom-row {
+		max-width: 100%;
+	}
+	.premium-ebooks-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		max-width: 450px;
+		margin: 0 auto;
+	}
+	.ebook-card {
+		min-height: 380px;
+		padding: 1.5rem;
 	}
 }
 
@@ -1923,7 +1941,7 @@ img {
 		font-size: 0.95rem;
 	}
 	.methodes > h2 {
-		font-size: 28px;
+		font-size: 22px;
 	}
 
 	.services-grid {
@@ -1942,6 +1960,9 @@ img {
 		padding: 1rem;
 		grid-template-columns: 1fr;
 	}
+	.service-title {
+		font-size: 1.3rem;
+	}
 
 	.tab-navigation {
 		margin-bottom: 2rem;
@@ -1958,13 +1979,14 @@ img {
 	}
 
 	.ebook-card {
-		height: auto;
+		min-height: 380px;
 		padding: 1.5rem;
-		width: auto;
+		width: 100%; /* FIXED: Full width for all cards */
+		box-sizing: border-box; /* FIXED: Include padding in width calculation */
 	}
 
 	.ebook-cover {
-		height: 200px; /* Slightly smaller on mobile */
+		height: 160px; /* Slightly smaller on mobile */
 	}
 
 	.ebook-title {
@@ -1975,20 +1997,20 @@ img {
 		font-size: 0.85rem;
 	}
 
-	/* UPDATED: Mobile responsive for new layout */
 	.premium-top-row,
-	.premium-middle-row {
-		grid-template-columns: 1fr; /* Single column on mobile */
-		gap: 1.5rem;
-	}
-
 	.premium-bottom-row {
+		display: contents; /* FIXED: Remove all nested grid layouts */
+	}
+	.premium-ebooks-grid {
+		display: grid;
 		grid-template-columns: 1fr;
-		max-width: 100%;
+		gap: 1.5rem;
+		max-width: 400px;
+		margin: 0 auto;
 	}
 
 	.blogs {
-		padding: 1rem;
+		padding: 2rem;
 	}
 
 	.toggle-btn {
@@ -2081,14 +2103,13 @@ img {
 	.service-card {
 		padding: 1.2rem;
 	}
-
 	.ebook-card {
-		min-height: 420px;
+		min-height: 360px;
 		padding: 1.3rem;
 	}
 
 	.ebook-cover {
-		height: 180px;
+		height: 150px;
 	}
 
 	.download-btn {
@@ -2096,9 +2117,7 @@ img {
 		font-size: 0.95rem;
 	}
 
-	/* Ensure all premium rows are single column on small mobile */
 	.premium-top-row,
-	.premium-middle-row,
 	.premium-bottom-row {
 		grid-template-columns: 1fr;
 	}
