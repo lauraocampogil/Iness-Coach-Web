@@ -3,8 +3,18 @@
 require_once('vendor/composer/autoload.php');
 
 // ====== CONFIGURATION - À MODIFIER ======
-$stripe_webhook_secret = 'whsec_2yugEawT7RMf5gYr6KYuEfrcVGkuQsX6';
-$stripe_secret_key = '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';
+if (file_exists('.env')) {
+    $lines = file('.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos($line, '=') !== false) {
+            list($key, $value) = explode('=', $line, 2);
+            $_ENV[trim($key)] = trim($value);
+        }
+    }
+}
+
+$stripe_secret_key = $_ENV['STRIPE_SECRET_KEY'] ?? '';
+$stripe_webhook_secret = $_ENV['STRIPE_WEBHOOK_SECRET'] ?? '';
 
 \Stripe\Stripe::setApiKey($stripe_secret_key);
 
