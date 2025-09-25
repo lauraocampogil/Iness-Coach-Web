@@ -1920,6 +1920,7 @@ img {
 	}
 	.missions > h2 {
 		font-size: 22px;
+		padding: 1rem;
 	}
 
 	.mission-grid {
@@ -1937,6 +1938,12 @@ img {
 	}
 	.methodes > h2 {
 		font-size: 22px;
+		padding: 1rem;
+	}
+	.methodes-subtitle {
+		font-size: 1rem;
+		padding: 0 1rem;
+		margin-bottom: 2rem;
 	}
 
 	.services-grid {
@@ -2019,7 +2026,7 @@ img {
 	}
 
 	.faq-container h2 {
-		font-size: 28px;
+		font-size: 22px;
 	}
 
 	.faq-question {
