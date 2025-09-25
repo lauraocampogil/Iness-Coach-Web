@@ -1273,8 +1273,6 @@ img {
 	flex-direction: column;
 	box-sizing: border-box;
 	overflow: hidden;
-	/* FIXED: Ensure minimum consistent height */
-	min-height: 500px;
 }
 
 .ebook-card:hover {
@@ -1762,9 +1760,6 @@ img {
 		grid-template-columns: 1fr;
 		/* REMOVED: max-width restriction completely */
 	}
-	.ebook-card {
-		min-height: 450px;
-	}
 }
 
 /* Tablets and small desktops */
@@ -2208,5 +2203,40 @@ img {
 
 	.footer-container {
 		padding: 2rem 0.5rem 1.5rem;
+	}
+}
+/* New breakpoint for 1028px to 1200px screens because of the ebooks premium section */
+@media (min-width: 1028px) and (max-width: 1200px) {
+	.premium-ebooks-grid {
+		max-width: 600px; /* Constrain the container width */
+		margin: 0 auto;
+	}
+
+	.premium-top-row,
+	.premium-bottom-row {
+		grid-template-columns: 1fr; /* Single column layout */
+		max-width: 500px; /* Individual row constraint */
+		margin: 0 auto;
+	}
+
+	.ebook-card {
+		max-width: 450px; /* Prevent cards from getting too wide */
+		margin: 0 auto;
+	}
+}
+
+/* Also update the existing 1200px breakpoint to be more specific */
+@media (max-width: 1200px) and (min-width: 1201px) {
+	.premium-top-row {
+		grid-template-columns: 1fr;
+	}
+
+	.premium-bottom-row {
+		grid-template-columns: 1fr;
+		max-width: 400px;
+	}
+
+	.ebook-card {
+		min-height: 450px;
 	}
 }
